@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 class Box extends React.Component {
   constructor(props) {
     super(props);
@@ -15,7 +14,7 @@ class Box extends React.Component {
   render() {
   
     return (
-      <div className="box">
+      <div className={'box ' + this.props.className}>
           {this.props.children}
 
        </div>

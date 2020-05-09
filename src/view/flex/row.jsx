@@ -1,6 +1,6 @@
 import React from 'react';
 
-class Item extends React.Component {
+class Row extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
@@ -14,11 +14,11 @@ class Item extends React.Component {
   render() {
   
     return (
-      <div className="item">
-        {this.props.children}
+      <div className={'row ' + this.props.className}>
+          {this.props.children}
        </div>
     );
   }
 }
 
-export default Item;
+export default Row;
