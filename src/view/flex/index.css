@@ -3,6 +3,7 @@ html, body {
     height: 100%;
     margin: 0;
     padding: 0;
+    background: black;
 }
 .box-wrapper {
     height: 100%;
@@ -11,7 +12,7 @@ html, body {
     flex-direction: row;
     justify-content: center;
     align-items: center;
-    background: black;
+    flex-wrap: wrap;
 }
 .box {
     width: 180px;
@@ -22,6 +23,8 @@ html, body {
     flex-direction: column;
     margin: 20px;
     padding: 10px;
+    flex-grow: 0;
+    flex-shrink: 0;
 }
 .row {
     display: flex;

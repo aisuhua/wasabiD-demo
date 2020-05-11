@@ -58,7 +58,7 @@ class FlexBox extends React.Component {
                 </Row>
             </Box>
 
-            <Box className="four">
+            <Box className="five">
                 <Row className="row1">
                     <Item>1</Item>
                     <Item>2</Item>
@@ -66,9 +66,24 @@ class FlexBox extends React.Component {
                 <Row className="row2">
                     <Item>3</Item>
                 </Row>
-                <Row className="row2">
+                <Row className="row3">
                     <Item>4</Item>
                     <Item>5</Item>
+                </Row>
+            </Box>
+
+            <Box className="six">
+                <Row className="row1">
+                    <Item>1</Item>
+                    <Item>2</Item>
+                </Row>
+                <Row className="row2">
+                    <Item>3</Item>
+                    <Item>4</Item>
+                </Row>
+                <Row className="row3">
+                    <Item>5</Item>
+                    <Item>6</Item>
                 </Row>
             </Box>
         </div>
