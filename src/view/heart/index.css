@@ -1,0 +1,48 @@
+html, body {
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+}
+#root {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.heart {
+    background-color: red;
+    width: 200px;
+    height: 200px;
+    position: relative;
+    transform: rotate(-45deg);
+    animation: 1s donghua ease infinite;
+}
+
+.heart .left,
+.heart .right {
+    width: 200px;
+    height: 200px;
+    background: red;
+    border-radius: 50%;
+    position: absolute;
+}
+
+.heart .left {
+    top: -100px;
+    left: 0;
+    background: red;
+}
+
+.heart .right {
+    left: 100px;
+    top: 0;
+    background: red;
+}
+
+@keyframes donghua {
+    0% { transform: rotate(-45deg) scale(1); }
+    50% { transform: rotate(-45deg) scale(1.3); }
+    100% { transform: rotate(-45deg) scale(1); }
+}
