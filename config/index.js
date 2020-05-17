@@ -38,6 +38,11 @@ let entry = [
     title: '后台管理系统-heart', // 标题
     src: './view/heart/index.jsx' //登陆页面
   },
+  {
+    filename: 'modal', //文件名，
+    title: '后台管理系统-modal', // 标题
+    src: './view/modal/index.jsx' //登陆页面
+  },
 ];
 
 module.exports = entry;
