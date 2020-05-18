@@ -131,7 +131,12 @@ class Modal extends React.Component {
     }
 
     openModal() {
-        this.setState({ show: true });
+        this.setState({
+            show: true,
+            yourname: '',
+            left: '0px',
+            top: '0px'
+        });
     }
 
     render() {
