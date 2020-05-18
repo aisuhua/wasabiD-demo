@@ -42,6 +42,12 @@ class Modal extends React.Component {
             return;
         }
 
+        if (e.buttons !== 1) {
+            return false;
+        }
+
+        console.log('dragStart');
+
         this.setState({
             moveCursor: 'move',
             moveFlag: true,
@@ -73,6 +79,9 @@ class Modal extends React.Component {
     }
 
     handleDragEnd() {
+
+        console.log('dragEnd');
+
         this.setState({
             moveCursor: 'default',
             moveFlag: false
