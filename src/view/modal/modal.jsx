@@ -114,12 +114,14 @@ class Modal extends React.Component {
         this.setState({ left: '0px', top: '0px' })
         this.props.handelClose(e);
     }
+
     render() {
         return (
-            <div id="myModal" className="modal" style={this.props.show ? { display: 'block' } : { display: 'none' }}>
+            <div id="myModal" className="modal" style={{ display: this.props.show ? 'block' : 'none' }}>
                 <div className="modal-dialog">
                     <div className="modal-content" onMouseMove={this.handleMouseMove} style={{ cursor: this.state.cursor, left: this.state.left, top: this.state.top }}>
-                        <div className="modal-header" onMouseDown={this.handleDragStart} style={{ cursor: this.state.moveCursor}}>
+
+                        <div className="modal-header" onMouseDown={this.handleDragStart} style={{ cursor: this.state.moveCursor }}>
                             <span className="close" onClick={this.handleClose}>&times;</span>
                             <h2>信息</h2>
                         </div>
@@ -132,6 +134,7 @@ class Modal extends React.Component {
                             <button className="ok" disabled={!this.props.yourname} onClick={this.handleOk}>确定</button>
                             <button className="cancel" onClick={this.handleClose}>取消</button>
                         </div>
+
                     </div>
                 </div>
             </div>
