@@ -12,8 +12,8 @@ const webpack = require('webpack');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin'); // 打包前先清空dist
 var HtmlWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin'); //分离js中的css
-const host = '127.0.0.1'; //地址
-const port = 8081; //端口号
+const host = '0.0.0.0'; //地址
+const port = 8080; //端口号
 
 
 
