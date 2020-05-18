@@ -30,6 +30,12 @@ class Modal extends React.Component {
         document.addEventListener('mouseup', this.handleDragEnd);
     }
 
+    componentWillUnmount() {
+        document.removeEventListener('mousedown', this.handleClickOutside);
+        document.removeEventListener('mousemove', this.handleDrag);
+        document.removeEventListener('mouseup', this.handleDragEnd);
+    }
+
     handleDragStart(e) {
         if (e.target.className !== 'modal-header') {
             return;
