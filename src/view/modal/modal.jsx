@@ -5,11 +5,7 @@ class Modal extends React.Component {
     constructor(props) {
         super(props);
 
-        console.log(props);
-
         this.state = {
-            yourname: '',
-            show: this.props.show,
             cursor: 'default',
             moveCursor: 'default',
             moveFlag: false,
@@ -19,7 +15,6 @@ class Modal extends React.Component {
             top: '0px',
         };
 
-        this.handleChange = this.handleChange.bind(this);
         this.handleOk = this.handleOk.bind(this);
         this.handleClose = this.handleClose.bind(this);
         this.handleClickOutside = this.handleClickOutside.bind(this);
@@ -37,6 +32,11 @@ class Modal extends React.Component {
 
     handleDragStart(e) {
         if (e.target.className !== 'modal-header') {
+            return;
+        }
+
+        // 必须是鼠标左键点击
+        if (e.nativeEvent.buttons !== 1) {
             return;
         }
 
@@ -102,21 +102,17 @@ class Modal extends React.Component {
 
     handleClickOutside(e) {
         if (e.target.className === 'modal-dialog') {
-            this.setState({ show: false });
+            this.props.handelClose(e);
         }
     }
 
-    handleChange(e) {
-        this.setState({ yourname: e.target.value });
+    handleOk(e) {
+        this.props.handleOk(e);
     }
 
-    handleOk() {
-        alert('您输入的是：“'+this.state.yourname +'”');
-        this.setState({ show: false });
-    }
-
-    handleClose() {
-        this.setState({ show: false });
+    handleClose(e) {
+        this.setState({ left: '0px', top: '0px' })
+        this.props.handelClose(e);
     }
     render() {
         return (
@@ -129,13 +125,11 @@ class Modal extends React.Component {
                         </div>
 
                         <div className="modal-body">
-                            <label htmlFor="yourname">
-                                用户名：<input type="text" id="yourname" onChange={this.handleChange} value={this.state.yourname}/>
-                            </label>
+                            {this.props.children}
                         </div>
 
                         <div className="modal-footer">
-                            <button className="ok" disabled={!this.state.yourname} onClick={this.handleOk}>确定</button>
+                            <button className="ok" disabled={!this.props.yourname} onClick={this.handleOk}>确定</button>
                             <button className="cancel" onClick={this.handleClose}>取消</button>
                         </div>
                     </div>

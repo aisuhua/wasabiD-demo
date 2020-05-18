@@ -95,7 +95,7 @@ input {
 }
 .modal-footer button.ok[disabled] {
     cursor: not-allowed;
-    opacity: .65;
+    opacity: 0.50;
 }
 .modal-footer button.cancel {
     background: #fff;
