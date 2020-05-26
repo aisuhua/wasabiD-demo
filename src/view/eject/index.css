@@ -1,0 +1,118 @@
+html,body{
+    height: 100%;
+    width: 100%;
+    padding:0px;
+    margin: 0px;
+}
+.body{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+   
+}
+.open{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.eject-body{ 
+    position:fixed;
+    left:0px;top:0px;
+    width:100%;  /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+    height:100%;
+    filter:alpha(opacity=70);  /*设置透明度为60%*/
+    opacity:0.6;  /*非IE浏览器下设置透明度为60%*/
+    z-index:2; 
+    background:gray;
+    display: flex;
+    justify-content: center;
+    
+}
+.eject-box{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position:fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    -webkit-transform: translate(-50%,-50%);
+    -moz-transform: translate(-50%,-50%);
+    width: 400px;
+    height: 200px;
+    /*margin: 5px;  这一行会影响拖动的方法，导致鼠标跟不上拖动框 */
+    padding: 2px;
+    background-color: #87b1ac;
+    border: 1px solid #ccc;
+    z-index: 3;
+    border-radius: 4px;
+}
+
+.eject-box-head{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px;
+    background-color: lightgreen;
+    cursor: grabbing;
+}
+
+.eject-box-content{
+    height: 100%;
+    margin: 0px 4px 0px 0px;
+    background-color: aliceblue;
+}
+
+.eject-box-content-input{
+    /* left:0px;top:0px; */
+    width: 100%; /*宽度设置为100%，这样才能使隐藏背景层覆盖原页面*/
+    height:100%;
+    /* margin: 2px; */
+    margin-right: 5px;
+    border: 0px solid rgb(255, 255, 255);
+}
+
+.eject-box-tail{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    height: 50px;
+    background-color: burlywood;
+}
+
+.eject-box-tail-define,.eject-box-tail-cancle{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #dddddd;
+    border-radius: 4px;
+    height: 30px;
+    width: 60px;
+    size: 14px;
+    margin-top: 10px;
+    box-shadow: 0 1px white inset;
+}
+
+.eject-box-tail-define:active,.eject-box-tail-cancle:active{
+    box-shadow: .05em .1em .2em rgba(0,0,0,.6) inset;
+    border-color: rgba(0,0,0,.3);
+    background: #bbb;
+}
+
+.eject-box-tail-define:hover{
+    color:rgb(15, 0, 0);
+}
+
+.eject-box-tail-define{
+    cursor: not-allowed;
+}
+
+.eject-box-tail-cancle{
+    cursor: pointer;
+}
+
+.eject-box-tail-define>span,.eject-box-tail-cancle>span{
+    font-size: 14px;
+    color: #000;
+}
