@@ -3,29 +3,18 @@ html,body{
     width: 100%;
     padding:0px;
     margin: 0px;
-    background-color: #ccc;
     font-weight: 400;
     line-height: 1.5;
+    background: #efefef;
 }
 
 .global{
     position:fixed;
-    left:0px;top:0px;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%,-50%);
-    -webkit-transform: translate(-50%,-50%);
-    -moz-transform: translate(-50%,-50%);
-
+    background: #fff;
     width: 880px;
-    height: 625;
-    border-radius: 1%;
-    background-color: #ffffff;
+    height: 625px;
     padding:25px;
-
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
+    margin: 20px 0 0 20px;
 }
 
 .choose{
@@ -33,7 +22,7 @@ html,body{
     
     color: #555555;
     font: 14px;
-    padding: 10px 25px 10px;
+
     border: 1px solid #e3e3e3;
     border-bottom: 0;
 

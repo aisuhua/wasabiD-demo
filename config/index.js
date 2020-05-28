@@ -54,9 +54,9 @@ let entry = [
     src: './view/eject/index.jsx' //登陆页面
   },
   {
-    filename: 'lotto', //文件名，
-    title: '后台管理系统-center布局', // 标题
-    src: './view/lotto/index.jsx' //登陆页面
+    filename: 'lottery', //文件名，
+    title: '后台管理系统-lottery', // 标题
+    src: './view/lottery/index.jsx' //登陆页面
   }
   
   
